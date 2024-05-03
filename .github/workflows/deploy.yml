@@ -8,8 +8,9 @@ env:
   MONGODB_DB_NAME: "test"
 jobs:
   test:
+    environment: testing
     env:
-      MONGODB_ADDRESS: cluster0.xy5lfaa.mongodb.net
+      MONGODB_ADDRESS: ${{ secrets.MONGODB_ADDRESS }}
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
